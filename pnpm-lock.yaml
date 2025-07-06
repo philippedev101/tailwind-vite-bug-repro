@@ -1,0 +1,41 @@
+lockfileVersion: '9.0'
+
+settings:
+  autoInstallPeers: true
+  excludeLinksFromLockfile: false
+
+overrides:
+  tailwindcss: link:../tailwindcss/packages/tailwindcss
+  '@tailwindcss/vite': link:../tailwindcss/packages/@tailwindcss-vite
+  '@tailwindcss/node': link:../tailwindcss/packages/@tailwindcss-node
+  '@tailwindcss/oxide': link:../tailwindcss/crates/node
+  vite: link:../vite/packages/vite
+
+importers:
+
+  .:
+    dependencies:
+      tailwindcss:
+        specifier: link:../tailwindcss/packages/tailwindcss
+        version: link:../tailwindcss/packages/tailwindcss
+      vite:
+        specifier: link:../vite/packages/vite
+        version: link:../vite/packages/vite
+    devDependencies:
+      '@tailwindcss/vite':
+        specifier: link:../tailwindcss/packages/@tailwindcss-vite
+        version: link:../tailwindcss/packages/@tailwindcss-vite
+      typescript:
+        specifier: ^5.2.2
+        version: 5.8.3
+
+packages:
+
+  typescript@5.8.3:
+    resolution: {integrity: sha512-p1diW6TqL9L07nNxvRMM7hMMw4c5XOo/1ibL4aAIGmSAt9slTE1Xgw5KWuof2uTOvCg9BY7ZRi+GaF+7sfgPeQ==}
+    engines: {node: '>=14.17'}
+    hasBin: true
+
+snapshots:
+
+  typescript@5.8.3: {}

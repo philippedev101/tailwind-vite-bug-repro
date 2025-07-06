@@ -1,0 +1,26 @@
+{
+  "name": "tailwind-vite-bug-repro",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite"
+  },
+  "dependencies": {
+    "tailwindcss": "4.1.11",
+    "vite": "5.3.5"
+  },
+  "devDependencies": {
+    "@tailwindcss/vite": "4.1.11",
+    "typescript": "^5.2.2"
+  },
+  "pnpm": {
+    "overrides": {
+      "tailwindcss": "link:../tailwindcss/packages/tailwindcss",
+      "@tailwindcss/vite": "link:../tailwindcss/packages/@tailwindcss-vite",
+      "@tailwindcss/node": "link:../tailwindcss/packages/@tailwindcss-node",
+      "@tailwindcss/oxide": "link:../tailwindcss/crates/node",
+      "vite": "link:../vite/packages/vite"
+    }
+  }
+}
